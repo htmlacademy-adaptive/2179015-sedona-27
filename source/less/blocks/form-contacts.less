@@ -8,7 +8,6 @@
   margin: 0;
   margin-left: 20px;
   padding: 0;
-  padding-top: 16px;
 }
 
 .form-contacts__input {
@@ -23,5 +22,22 @@
   padding-bottom: 16px;
   background-color: #f2f2f2;
   border: none;
-  width: 280px;
+  width: 260px;
+}
+
+.form-contacts__field {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 16px;
+  margin: 0;
+
+  &:last-child {
+    padding-bottom: 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .form-contacts__input {
+    width: 400px;
+  }
 }

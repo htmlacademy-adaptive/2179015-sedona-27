@@ -1,5 +1,12 @@
+.images__wrapper {
+  width: 280px;
+  margin-left: 20px;
+}
+
 .images__list {
   list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
 .images__title {
@@ -10,6 +17,7 @@
   font-weight: 700;
   text-transform: uppercase;
   margin: 0;
+  padding: 0;
 }
 
 .images__text {
@@ -28,4 +36,23 @@
   color: #333333;
   font-weight: 400;
   margin: 0;
+}
+
+@media (min-width: @tablet-width) {
+  .images__wrapper {
+    width: 648px;
+    margin-left: 60px;
+  }
+
+  .images__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .images__wrapper {
+    width: 1200px;
+    margin: 0;
+  }
 }

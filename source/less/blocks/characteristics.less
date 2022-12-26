@@ -1,11 +1,29 @@
 .characteristics {
-  padding-top: 32px;
+  padding: 0;
 }
 
 .characteristics__wrapper {
-  max-width: 320px;
-  padding: 0;
-  margin: 0;
+  margin-top: 32px;
+  margin-bottom: 16px;
+}
+
+@media (min-width: @tablet-width) {
+  .characteristics__wrapper {
+    width: 520px;
+    padding: 0;
+    margin-top: 48px;
+    margin-left: 124px;
+    margin-bottom: 55px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .characteristics__wrapper {
+    width: 484px;
+    margin-top: 59px;
+    margin-left: 357px;
+    margin-bottom: 44px;
+  }
 }
 
 .characteristics__title {

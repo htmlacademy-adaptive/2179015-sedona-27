@@ -1,3 +1,10 @@
+.impressions__wrapper {
+  width: 280px;
+  margin: 0;
+  margin-left: 20px;
+  margin-bottom: 49px;
+}
+
 .impressions__title {
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
@@ -17,4 +24,43 @@
   font-weight: 700;
   text-align: center;
   margin: 0;
+}
+
+@media (min-width: @tablet-width) {
+  .impressions__wrapper {
+    width: 648px;
+    margin: 0;
+    margin-left: 60px;
+    margin-right: 60px;
+    margin-bottom: 48px;
+  }
+
+  .impressions__group {
+    width: 648px;
+    padding: 0;
+  }
+
+  .impressions__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .impressions__item {
+    width: 280px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .impressions__wrapper {
+    width: 960px;
+    margin: 0;
+    margin-left: 120px;
+    margin-right: 120px;
+    margin-bottom: 56px;
+  }
+
+  .impressions__group {
+    width: 960px;
+  }
 }
