@@ -1,7 +1,7 @@
 .search__wrapper {
   margin: 0;
-  padding-top: 38px;
-  padding-bottom: 49px;
+  margin-top: 38px;
+  margin-bottom: 49px;
 }
 
 .search__title {
@@ -40,4 +40,30 @@
   margin: 0 18px;
   padding: 16px 49px;
   text-decoration: none;
+}
+
+@media (min-width: @tablet-width) {
+  .search {
+    width: 768px;
+    margin-top: 61px;
+    margin-bottom: 58px;
+  }
+
+  .search__wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 458px;
+    margin-left: 155px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .search {
+    width: 1200px;
+    margin-bottom: 66px;
+  }
+
+  .search__wrapper {
+    margin-left: 371px;
+  }
 }

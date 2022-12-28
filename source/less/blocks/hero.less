@@ -9,8 +9,30 @@
   background-repeat: no-repeat, no-repeat;
   text-align: center;
   min-height: 389px;
+  width: 320px;
 }
 
 .hero__logo {
   margin: 0;
+}
+
+@media (min-width: @tablet-width) {
+  .hero {
+    background-image: url("../img/divider-tablet.svg"), url("../img/back-tablet.jpg");
+    min-height: 518px;
+    width: 768px;
+  }
+
+  .hero__images {
+    width: 460px;
+    height: 350px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .hero {
+    background-image: url("../img/divider-desktop.svg"), url("../img/back-desktop.jpg");
+    min-height: 518px;
+    width: 1200px;
+  }
 }

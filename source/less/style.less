@@ -21,6 +21,10 @@
 @import "./blocks/social.less";
 @import "./blocks/copyright.less";
 @import "./blocks/form-contacts.less";
+@import "./blocks/body-container.less";
+@import "./blocks/variables.less";
+@import "./blocks/main.less";
+@import "./blocks/main-catalog.less";
 
 @font-face {
   font-family: "PT Sans";
@@ -55,9 +59,13 @@
 }
 
 body {
-  max-width: 320px;
+  min-width: 320px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
   font-family: "PT Sans", sans-serif;
   margin: 0;
+  background-color: #e7e5e5;
 }
 
 .visually-hidden {

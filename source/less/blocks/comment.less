@@ -1,5 +1,7 @@
 .comment__wrapper {
   margin-bottom: 24px;
+  margin-left: 20px;
+  width: 279px;
 }
 
 .comment__title {
@@ -22,12 +24,11 @@
   color: fade(#000000, 30%);
   background-color: #f2f2f2;
   border: none;
-  width: 247px;
+  width: 263px;
   height: 118px;
   margin: 0;
-  margin-left: 20px;
   margin-bottom: 56px;
-  padding: 16px;
+  padding-left: 16px;
 }
 
 .comment__button {
@@ -44,12 +45,11 @@
   text-decoration: none;
   border: none;
   width: 280px;
-  margin-left: 20px;
-  margin-right: 20px;
   margin-bottom: 3px;
 }
 
 .comment__text {
+  display: block;
   font-family: "PT Sans", sans-serif;
   font-size: 12px;
   line-height: 21px;
@@ -58,6 +58,40 @@
   text-transform: uppercase;
   text-align: center;
   margin: 0;
-  margin-left: 163px;
+  margin-left: 143px;
   padding: 0;
+}
+
+@media (min-width: @tablet-width) {
+  .comment__wrapper {
+    margin-bottom: 64px;
+    margin-left: 60px;
+    width: 648px;
+  }
+
+  .comment__input {
+    width: 635px;
+    height: 160px;
+  }
+
+  .comment__button {
+    width: 324px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .comment__wrapper {
+    margin-left: 120px;
+    width: 960px;
+  }
+
+  .comment__input {
+    width: 768px;
+    margin-left: 96px;
+  }
+
+  .comment__button {
+    width: 384px;
+    margin-left: 96px;
+  }
 }
