@@ -1,7 +1,20 @@
 .comment__wrapper {
-  margin-bottom: 24px;
+  position: relative;
   margin-left: 20px;
+  margin-bottom: 20px;
   width: 279px;
+}
+
+@media (max-width: @mobile-width-only) {
+  .comment__wrapper::before {
+    position: absolute;
+    content: "";
+    width: 320px;
+    height: 1px;
+    top: -25px;
+    left: -20px;
+    background-color: #e5e5e5;
+  }
 }
 
 .comment__title {
@@ -17,6 +30,10 @@
 }
 
 .comment__input {
+  display: flex;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  align-items: flex-start;
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
   line-height: 26px;
@@ -24,11 +41,15 @@
   color: fade(#000000, 30%);
   background-color: #f2f2f2;
   border: none;
-  width: 263px;
-  height: 118px;
+  width: 279px;
+  height: 150px;
   margin: 0;
   margin-bottom: 56px;
-  padding-left: 16px;
+  padding: 16px 16px;
+}
+
+.comment__input::placeholder {
+  color: fade(#000000, 30%);
 }
 
 .comment__button {
@@ -58,24 +79,63 @@
   text-transform: uppercase;
   text-align: center;
   margin: 0;
-  margin-left: 143px;
+  margin-left: 142px;
   padding: 0;
 }
 
 @media (min-width: @tablet-width) {
   .comment__wrapper {
-    margin-bottom: 64px;
+    margin-bottom: 70px;
     margin-left: 60px;
     width: 648px;
   }
 
+  .comment__wrapper::before {
+    position: absolute;
+    content: "";
+    width: 123px;
+    height: 1px;
+    background-color: #dbdbdb;
+    top: 10px;
+    left: 0;
+  }
+
+  .comment__wrapper::after {
+    position: absolute;
+    content: "";
+    width: 123px;
+    height: 1px;
+    background-color: #dbdbdb;
+    top: 10px;
+    right: 0;
+  }
+
+  .comment__title {
+    font-size: 21px;
+    line-height: 26px;
+    padding-bottom: 28px;
+  }
+
   .comment__input {
-    width: 635px;
+    width: 648px;
     height: 160px;
+    margin-bottom: 48px;
+  }
+
+  .comment__button-group {
+    display: flex;
+    justify-content: space-between;
   }
 
   .comment__button {
     width: 324px;
+  }
+
+  .comment__text {
+    font-size: 14px;
+    line-height: 21px;
+    color: #333333;
+    padding-top: 23px;
   }
 }
 
@@ -83,6 +143,14 @@
   .comment__wrapper {
     margin-left: 120px;
     width: 960px;
+  }
+
+  .comment__wrapper::before {
+    width: 280px;
+  }
+
+  .comment__wrapper::after {
+    width: 280px;
   }
 
   .comment__input {
@@ -93,5 +161,9 @@
   .comment__button {
     width: 384px;
     margin-left: 96px;
+  }
+
+  .comment__text {
+    padding-right: 96px;
   }
 }

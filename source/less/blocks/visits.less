@@ -1,8 +1,34 @@
 .visits__wrapper {
+  position: relative;
   width: 280px;
   margin: 0;
   margin-left: 20px;
-  margin-bottom: 49px;
+  margin-bottom: 43px;
+}
+
+@media (max-width: @mobile-width-only) {
+  .visits__wrapper::before {
+    position: absolute;
+    content: "";
+    width: 320px;
+    height: 1px;
+    top: -25px;
+    left: -20px;
+    background-color: #e5e5e5;
+  }
+}
+
+.visits__group {
+  border: none;
+}
+
+.visits__list {
+  list-style-type: none;
+  margin: 0;
+}
+
+.visits__item:not(:last-child) {
+  padding-bottom: 30px;
 }
 
 .visits__title {
@@ -14,6 +40,7 @@
   text-transform: uppercase;
   text-align: center;
   margin: 0;
+  margin-bottom: 18px;
 }
 
 @media (min-width: @tablet-width) {
@@ -22,7 +49,7 @@
     margin: 0;
     margin-left: 60px;
     margin-right: 60px;
-    margin-bottom: 42px;
+    margin-bottom: 19px;
   }
 
   .visits__group {
@@ -30,11 +57,40 @@
     padding: 0;
   }
 
+  .visits__title {
+    display: block;
+    width: 308px;
+    font-size: 21px;
+    line-height: 26px;
+    margin-bottom: 35px;
+  }
+
+  .visits__wrapper::before {
+    position: absolute;
+    content: "";
+    width: 123px;
+    height: 1px;
+    background-color: #dbdbdb;
+    top: 25px;
+    left: 0;
+  }
+
+  .visits__wrapper::after {
+    position: absolute;
+    content: "";
+    width: 123px;
+    height: 1px;
+    background-color: #dbdbdb;
+    top: 25px;
+    right: 0;
+  }
+
   .visits__list {
     width: 480px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    margin-left: 104px;
   }
 
   .visits__item {
@@ -51,14 +107,37 @@
   }
 
   .visits__group {
-    width: 960px;
+    width: 857px;
+  }
+
+  .visits__title {
+    margin-left: 10px;
+    margin-bottom: 66px;
   }
 
   .visits__list {
-    width: 960px;
+    width: 832px;
+    margin-left: 63px;
   }
 
   .visits__item {
-    width: 172px;
+    width: 140px;
+  }
+
+  .visits__item:nth-child(1),
+  .visits__item:nth-child(2) {
+    margin-right: 40px;
+  }
+
+  .visits__item:nth-child(3) {
+    margin-right: 20px;
+  }
+
+  .visits__wrapper::before {
+    width: 280px;
+  }
+
+  .visits__wrapper::after {
+    width: 280px;
   }
 }
