@@ -1,3 +1,22 @@
 .presentation__wrapper {
-  margin: 0 20px;
+  display: block;
+  padding: 0 20px;
+}
+
+.presentation__video {
+  display: block;
+}
+
+@media (min-width: @tablet-width) {
+  .presentation__wrapper {
+    padding: 0 60px;
+    padding-bottom: 38px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .presentation__wrapper {
+    padding: 0 200px;
+    padding-bottom: 85px;
+  }
 }

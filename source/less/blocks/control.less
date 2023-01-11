@@ -1,0 +1,54 @@
+.control {
+  position: relative;
+  display: block;
+}
+
+.control__mark {
+  position: absolute;
+  top: -7px;
+  left: -61px;
+  width: 46px;
+  height: 46px;
+  background-color: #f2f2f2;
+  border: none;
+  border-radius: 50%;
+}
+
+.control__input[type="radio"]:hover + .control__mark {
+  background-color: #e5e5e5;
+}
+
+.control__input[type="radio"]:active + .control__mark {
+  background-color: #d5d5d5;
+}
+
+.control__input[type="radio"]:checked + .control__mark::before {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  width: 16px;
+  height: 16px;
+  background-color: #333333;
+  border-radius: 50%;
+  content: "";
+}
+
+.control__input[type="checkbox"] + .control__mark {
+  border-radius: 4px;
+}
+
+.control__input[type="checkbox"]:hover + .control__mark {
+  background-color: #e5e5e5;
+}
+
+.control__input[type="checkbox"]:active + .control__mark {
+  background-color: #d5d5d5;
+}
+
+.control__input[type="checkbox"]:checked + .control__mark {
+  position: absolute;
+  background-image: url("../img/mark.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  content: "";
+}

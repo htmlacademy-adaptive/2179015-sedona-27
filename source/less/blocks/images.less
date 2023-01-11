@@ -1,12 +1,36 @@
 .images__wrapper {
-  width: 280px;
-  margin-left: 20px;
+  padding: 24px 20px;
 }
 
 .images__list {
   list-style-type: none;
   margin: 0;
   padding: 0;
+}
+
+.images__item:not(:last-child) {
+  margin-bottom: 50px;
+}
+
+@media (max-width: @mobile-width-only) {
+  .images__item {
+    position: relative;
+  }
+
+  .images__item::before {
+    position: absolute;
+    content: "";
+    top: -24px;
+    right: 0;
+    left: -20px;
+    width: 320px;
+    height: 1px;
+    background-color: #e5e5e5;
+  }
+}
+
+.images__photo {
+  display: block;
 }
 
 .images__title {
@@ -18,6 +42,7 @@
   text-transform: uppercase;
   margin: 0;
   padding: 0;
+  margin-top: 15px;
 }
 
 .images__text {
@@ -27,21 +52,30 @@
   color: #333333;
   font-weight: 400;
   margin: 0;
+  margin-bottom: 18px;
 }
 
 .images__raiting {
+  position: relative;
   font-family: "PT Sans", sans-serif;
   font-size: 14px;
   line-height: 21px;
   color: #333333;
-  font-weight: 400;
+  font-weight: 700;
   margin: 0;
+  padding-left: 40px;
+}
+
+.images__raiting::before {
+  position: absolute;
+  content: url("../img/like-icon.svg");
+  top: -5px;
+  left: 0;
 }
 
 @media (min-width: @tablet-width) {
   .images__wrapper {
-    width: 648px;
-    margin-left: 60px;
+    padding: 0 60px;
   }
 
   .images__list {
@@ -56,12 +90,40 @@
     grid-column: 1 / 3;
     grid-row: 1 / 2;
   }
+
+  .images__item {
+    margin: 0;
+  }
+
+  .images__item:not(:last-child) {
+    margin-bottom: 0;
+  }
+
+  .images__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 20px;
+    padding-bottom: 15px;
+  }
+
+  .images__title {
+    margin-top: 0;
+  }
+
+  .images__text {
+    margin-bottom: 0;
+  }
+
+  .images__raiting::before {
+    top: -4px;
+    left: 8px;
+  }
 }
 
 @media (min-width: @desktop-width) {
   .images__wrapper {
-    width: 1200px;
-    margin: 0;
+    padding: 0;
   }
 
   .images__list {
@@ -72,5 +134,32 @@
   .images__item--first {
     grid-column: 1 / 4;
     grid-row: 1 / 2;
+  }
+
+  .images__content {
+    background-color: fade(#000000, 30%);
+    padding-top: 22px;
+    padding-bottom: 15px;
+    margin: 0;
+  }
+
+  .images__title {
+    color: #ffffff;
+  }
+
+  .images__text {
+    color: #ffffff;
+  }
+
+  .images__raiting {
+    color: #ffffff;
+  }
+
+  .images__raiting::before {
+    content: url("../img/like-icon-white.svg");
+  }
+
+  .images__item:not(:last-child) {
+    margin-bottom: 0;
   }
 }

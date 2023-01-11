@@ -1,3 +1,11 @@
+.copyright__link {
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+}
+
 .copyright__text {
   font-family: "PT Sans", sans-serif;
   font-size: 14px;
@@ -5,4 +13,28 @@
   color: #000000;
   font-weight: 400;
   text-transform: uppercase;
+  text-decoration: none;
+  margin-right: 12px;
+}
+
+.copyright__link:hover {
+  fill: #81b3d2;
+}
+
+.copyright__text:hover {
+  color: #81b3d2;
+}
+
+.copyright__link:active {
+  fill: #b3b3b3;
+}
+
+.copyright__text:active {
+  color: #b3b3b3;
+}
+
+@media (min-width: @tablet-width) {
+  .copyright a {
+    margin: 0;
+  }
 }
