@@ -1,4 +1,4 @@
-.video__wrapper {
+.video {
   position: relative;
   padding: 18px 28px;
   padding-bottom: 38px;
@@ -42,9 +42,16 @@
 }
 
 @media (min-width: @tablet-width) {
-  .video__wrapper {
-    padding: 62px 161px;
+  .video {
+    padding: 62px 0;
     padding-bottom: 70px;
+  }
+
+  .video__wrapper {
+    display: flex;
+    flex-direction: column;
+    max-width: 445px;
+    margin: 0 161px;
   }
 
   .video__title {
@@ -55,8 +62,12 @@
 }
 
 @media (min-width: @desktop-width) {
-  .video__wrapper {
-    padding: 66px 377px;
+  video {
+    padding: 66px 0;
     padding-bottom: 80px;
+  }
+
+  .video__wrapper {
+    margin: 0 377px;
   }
 }

@@ -1,4 +1,4 @@
-.characteristics__wrapper {
+.characteristics {
   padding: 32px 25px;
 }
 
@@ -26,9 +26,16 @@
 }
 
 @media (min-width: @tablet-width) {
-  .characteristics__wrapper {
-    padding: 47px 124px;
+  .characteristics {
+    padding: 47px 0;
     padding-bottom: 55px;
+  }
+
+  .characteristics__wrapper {
+    display: flex;
+    flex-direction: column;
+    margin: 0 124px;
+    max-width: 520px;
   }
 
   .characteristics__title {
@@ -38,8 +45,13 @@
 }
 
 @media (min-width: @desktop-width) {
-  .characteristics__wrapper {
-    padding: 59px 358px;
+  .characteristics {
+    padding: 59px 0;
     padding-bottom: 44px;
+  }
+
+  .characteristics__wrapper {
+    max-width: 484px;
+    margin: 0 358px;
   }
 }

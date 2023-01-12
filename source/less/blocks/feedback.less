@@ -1,4 +1,4 @@
-.feedback__wrapper {
+.feedback {
   padding: 36px 20px;
   padding-bottom: 28px;
 }
@@ -28,9 +28,16 @@
 }
 
 @media (min-width: @tablet-width) {
-  .feedback__wrapper {
-    padding: 64px 166px;
+  .feedback {
+    padding: 64px 0;
     padding-bottom: 102px;
+  }
+
+  .feedback__wrapper {
+    display: flex;
+    flex-direction: column;
+    max-width: 435px;
+    margin: 0 166px;
   }
 
   .feedback__title {
@@ -40,9 +47,14 @@
 }
 
 @media (min-width: @desktop-width) {
-  .feedback__wrapper {
-    padding: 115px 382px;
+  .feedback {
+    padding: 115px 0;
     padding-bottom: 67px;
+  }
+
+  .feedback__wrapper {
+    max-width: 434px;
+    margin: 0 382px;
   }
 
   .feedback__title {
