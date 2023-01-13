@@ -1,8 +1,32 @@
-.visits__wrapper {
-  width: 280px;
+.visits {
+  position: relative;
+  padding: 25px 28px;
+  padding-bottom: 26px;
+}
+
+@media (max-width: @mobile-width-only) {
+  .visits__wrapper::before {
+    position: absolute;
+    content: "";
+    width: 320px;
+    height: 1px;
+    top: 0;
+    left: 0;
+    background-color: #e5e5e5;
+  }
+}
+
+.visits__group {
+  border: none;
+}
+
+.visits__list {
+  list-style-type: none;
   margin: 0;
-  margin-left: 20px;
-  margin-bottom: 49px;
+}
+
+.visits__item:not(:last-child) {
+  margin-bottom: 36px;
 }
 
 .visits__title {
@@ -14,15 +38,20 @@
   text-transform: uppercase;
   text-align: center;
   margin: 0;
+  margin-bottom: 18px;
 }
 
 @media (min-width: @tablet-width) {
+  .visits {
+    padding: 0;
+    padding-bottom: 20px;
+  }
+
   .visits__wrapper {
-    width: 648px;
-    margin: 0;
-    margin-left: 60px;
-    margin-right: 60px;
-    margin-bottom: 42px;
+    display: flex;
+    flex-direction: column;
+    max-width: 648px;
+    margin: 0 60px;
   }
 
   .visits__group {
@@ -30,11 +59,40 @@
     padding: 0;
   }
 
+  .visits__title {
+    display: block;
+    width: 308px;
+    font-size: 21px;
+    line-height: 26px;
+    margin-bottom: 35px;
+  }
+
+  .visits__wrapper::before {
+    position: absolute;
+    content: "";
+    width: 123px;
+    height: 1px;
+    background-color: #dbdbdb;
+    top: 25px;
+    left: 60px;
+  }
+
+  .visits__wrapper::after {
+    position: absolute;
+    content: "";
+    width: 123px;
+    height: 1px;
+    background-color: #dbdbdb;
+    top: 25px;
+    right: 60px;
+  }
+
   .visits__list {
     width: 480px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    margin-left: 104px;
   }
 
   .visits__item {
@@ -43,22 +101,50 @@
 }
 
 @media (min-width: @desktop-width) {
+  .visits {
+    padding: 0;
+    padding-bottom: 56px;
+  }
+
   .visits__wrapper {
-    width: 960px;
-    margin-left: 120px;
-    margin-right: 120px;
-    margin-bottom: 56px;
+    max-width: 960px;
+    margin: 0 120px;
   }
 
   .visits__group {
-    width: 960px;
+    width: 857px;
+  }
+
+  .visits__title {
+    margin-left: 10px;
+    margin-bottom: 66px;
   }
 
   .visits__list {
-    width: 960px;
+    width: 832px;
+    margin-left: 63px;
   }
 
   .visits__item {
-    width: 172px;
+    width: 140px;
+  }
+
+  .visits__item:nth-child(1),
+  .visits__item:nth-child(2) {
+    margin-right: 40px;
+  }
+
+  .visits__item:nth-child(3) {
+    margin-right: 20px;
+  }
+
+  .visits__wrapper::before {
+    width: 280px;
+    left: 120px;
+  }
+
+  .visits__wrapper::after {
+    width: 280px;
+    right: 120px;
   }
 }
