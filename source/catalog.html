@@ -6,8 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Седона</title>
   <link rel="icon" href="favicon.ico"> <!-- 32×32 -->
-  <link rel="icon" href="images/favicons/icon.svg" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="images/favicons/apple.png"> <!-- 180×180 -->
+  <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/favicons/apple.png"> <!-- 180×180 -->
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -58,7 +58,11 @@
         <div class="images__wrapper">
           <ul class="images__list">
             <li class="images__item images__item--first">
-              <img class="images__photo" src="img/photo-1-mobile.jpg" width="280" height="280" alt="Фото Бориса.">
+              <picture>
+                <source media="(min-width: 1200px)" srcset="img/photo-1-desktop.jpg 1x, img/photo-1-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/photo-1-tablet.jpg 1x, img/photo-1-tablet@2x.jpg 2x">
+                <img class="images__photo" src="img/photo-1-mobile.jpg" srcset="img/photo-1-mobile@2x.jpg 2x" width="280" height="280" alt="Фото Бориса.">
+              </picture>
               <div class="images__content">
                 <div class="images__content-text">
                   <h3 class="images__title">Неродные просторы</h3>
@@ -70,7 +74,11 @@
               </div>
             </li>
             <li class="images__item">
-              <img class="images__photo" src="img/photo-2-mobile.jpg" width="280" height="280" alt="Фото Сергея.">
+              <picture>
+                <source media="(min-width: 1200px)" srcset="img/photo-2-desktop.jpg 1x, img/photo-2-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/photo-2-tablet.jpg 1x, img/photo-2-tablet@2x.jpg 2x">
+                <img class="images__photo" src="img/photo-2-mobile.jpg" srcset="img/photo-2-mobile@2x.jpg 2x" width="280" height="280" alt="Фото Сергея.">
+              </picture>
               <div class="images__content">
                 <div class="images__content-text">
                   <h3 class="images__title">Местная растительность</h3>
@@ -81,8 +89,12 @@
                 </div>
               </div>
             </li>
-            <li class="images__item">
-              <img class="images__photo" src="img/photo-3-mobile.jpg" width="280" height="280" alt="Фото Петра.">
+            <li class="images__item images__item--photo-3">
+              <picture>
+                <source media="(min-width: 1200px)" srcset="img/photo-3-desktop.jpg 1x, img/photo-3-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/photo-3-tablet.jpg 1x, img/photo-3-tablet@2x.jpg 2x">
+                <img class="images__photo" src="img/photo-3-mobile.jpg" srcset="img/photo-3-mobile@2x.jpg 2x" width="280" height="280" alt="Фото Петра.">
+              </picture>
               <div class="images__content">
                 <div class="images__content-text">
                   <h3 class="images__title">Дорога на север</h3>
@@ -94,7 +106,11 @@
               </div>
             </li>
             <li class="images__item">
-              <img class="images__photo" src="img/photo-4-mobile.jpg" width="280" height="280" alt="Фото Антона.">
+              <picture>
+                <source media="(min-width: 1200px)" srcset="img/photo-4-desktop.jpg 1x, img/photo-4-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/photo-4-tablet.jpg 1x, img/photo-4-tablet@2x.jpg 2x">
+                <img class="images__photo" src="img/photo-4-mobile.jpg" srcset="img/photo-4-mobile@2x.jpg 2x" width="280" height="280" alt="Фото Антона.">
+              </picture>
               <div class="images__content">
                 <div class="images__content-text">
                   <h3 class="images__title">Мост дьявола</h3>
@@ -118,7 +134,11 @@
       <section class="presentation">
         <div class="presentation__wrapper">
           <h2 class="visually-hidden">Видео.</h2>
-          <img class="presentation__video" src="img/sedona-video.jpg" width="280" height="177" alt="Видео Седоны.">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="img/sedona-video-desktop.jpg 1x, img/sedona-video-desktop@2x.jpg 2x">
+            <source media="(min-width: 768px)" srcset="img/sedona-video-tablet.jpg 1x, img/sedona-video-tablet@2x.jpg 2x">
+            <img class="presentation__video" src="img/sedona-video.jpg" srcset="img/sedona-video@2x.jpg 2x" width="280" height="177" alt="Видео Седоны.">
+          </picture>
         </div>
       </section>
     </main>

@@ -31,6 +31,8 @@
 
 .images__photo {
   display: block;
+  width: 100%;
+  height: auto;
 }
 
 .images__title {
@@ -83,7 +85,6 @@
     grid-template-columns: 324px 324px;
     margin: 0;
     padding: 0;
-    background-color: #f2f2f2;
   }
 
   .images__item--first {
@@ -93,6 +94,11 @@
 
   .images__item {
     margin: 0;
+    background-color: #f2f2f2;
+  }
+
+  .images__item--photo-3 {
+    background-color: #eaeaea;
   }
 
   .images__item:not(:last-child) {
@@ -131,16 +137,24 @@
     background-color: #f2f2f2;
   }
 
+  .images__item {
+    position: relative;
+  }
+
   .images__item--first {
     grid-column: 1 / 4;
     grid-row: 1 / 2;
   }
 
   .images__content {
+    position: absolute;
     background-color: fade(#000000, 30%);
     padding-top: 22px;
     padding-bottom: 15px;
     margin: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
   }
 
   .images__title {

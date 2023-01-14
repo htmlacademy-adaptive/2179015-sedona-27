@@ -12,6 +12,11 @@
   width: 320px;
 }
 
+@media (min-resolution: 2dppx) {
+  background-image: url("../img/back-mobile@2x.jpg");
+  background-size: 1338px auto;
+}
+
 .hero__logo {
   margin: 0;
 }
@@ -21,6 +26,11 @@
     background-image: url("../img/divider-tablet.svg"), url("../img/back-tablet.jpg");
     min-height: 518px;
     width: 768px;
+  }
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/back-tablet@2x.jpg");
+    background-size: 1338px auto;
   }
 
   .hero__images {
@@ -34,5 +44,10 @@
     background-image: url("../img/divider-desktop.svg"), url("../img/back-desktop.jpg");
     min-height: 518px;
     width: 1200px;
+  }
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/back-desktop@2x.jpg");
+    background-size: 1338px auto;
   }
 }
