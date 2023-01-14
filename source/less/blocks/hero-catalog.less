@@ -4,11 +4,16 @@
   padding: 0;
   background-color: #808080;
   background-image: url("../img/divider-mobile.svg"), url("../img/back-catalog-mobile.jpg");
-  background-position: center bottom, center;
   background-repeat: no-repeat, no-repeat;
   text-align: center;
   min-height: 158px;
   width: 320px;
+  background-position: center bottom, 50% -55px;
+}
+
+@media (min-resolution: 2dppx) {
+  background-image: url("../img/back-catalog-mobile@2x.jpg");
+  background-size: 1338px auto;
 }
 
 .hero-catalog__logo {
@@ -21,6 +26,11 @@
     background-image: url("../img/divider-tablet.svg"), url("../img/back-catalog-tablet.jpg");
     min-height: 290px;
     width: 768px;
+  }
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/back-catalog-tablet@2x.jpg");
+    background-size: 1338px auto;
   }
 
   .hero-catalog__logo {
@@ -38,6 +48,11 @@
     background-image: url("../img/divider-desktop.svg"), url("../img/back-catalog-desktop.jpg");
     min-height: 301px;
     width: 1200px;
+  }
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/back-catalog-desktop@2x.jpg");
+    background-size: 1338px auto;
   }
 
   .hero-catalog__logo {
