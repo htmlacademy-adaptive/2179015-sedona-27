@@ -4,13 +4,22 @@
 }
 
 .map__images {
+  border: none;
   display: block;
-  width: 100%;
-  height: auto;
 }
 
 @media (min-width: @tablet-width) {
   .map__wrapper {
     margin-bottom: 0;
+  }
+
+  .map__images {
+    width: 768px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .map__images {
+    width: 1200px;
   }
 }
