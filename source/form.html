@@ -79,11 +79,11 @@
           <form class="contacts__form contacts__form-data form-contacts" action="https://echo.htmlacademy.ru/" method="post">
             <p class="form-contacts__field form-contacts__field-phone">
               <label class="form-contacts__label" for="phone">Контактный телефон*:</label>
-              <input class="form-contacts__input form-contacts__input-data" type="text" id="phone" name="phone" placeholder="Введите телефон">
+              <input class="form-contacts__input form-contacts__input-data" type="tel" id="phone" name="phone" placeholder="Введите телефон">
             </p>
             <p class="form-contacts__field form-contacts__field-mail">
               <label class="form-contacts__label" for="e-mail">Электронная почта*:</label>
-              <input class="form-contacts__input form-contacts__input-data" type="text" id="e-mail" name="e-mail" placeholder="Введите e-mail">
+              <input class="form-contacts__input form-contacts__input-data" type="email" id="e-mail" name="e-mail" placeholder="Введите e-mail">
             </p>
           </form>
         </div>
@@ -166,7 +166,7 @@
             <textarea class="comment__input" placeholder="Опишите подробно все свои восторги" name="comment"
               id="comment" required></textarea>
             <div class="comment__button-group">
-              <button class="comment__button" type="submit">Отправить отзыв</button>
+              <button class="comment__button" type="submit">Отправить отзыв <span class="visually-hidden">Отправить отзыв.</span></button>
               <span class="comment__text">* — обязательные поля</span>
             </div>
           </form>
